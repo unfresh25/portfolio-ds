@@ -5,8 +5,6 @@ import SocialPills from '../components/social-pills.astro';
 import Github from '../components/icons/github.astro';
 import Email from '../components/icons/email.astro';
 import gsap from 'gsap';
-import SplitType from 'split-type';
-import Timeline from '../components/timeline.astro';
 ---
 
 <Layout 
@@ -14,7 +12,7 @@ import Timeline from '../components/timeline.astro';
 	description="Analista de datos con +3 años de experiencia, conocimientos avanzados en matemática y estadística. Ofrece servicios de análisis de la información, ciencia de datos y desarrollo de aplicaciones visuales."
 >
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-60 h-screen">
+		<section class="w-full lg:w-[740px] mx-auto py-60 h-screen z-1">
 			<h2 class="text-green-600 text-center text-4xl animationn font-semibold">Data Analyst</h2>
 			<h1 class="text-center text-7xl font-bold">Jorge Borja Serrano</h1>
 			<h3 class="text-gray-500 text-center mt-2">Data's Storyteller, Insight's Architect.</h3>
@@ -34,18 +32,121 @@ import Timeline from '../components/timeline.astro';
 				</SocialPills>
 			</nav>
 		</section>
-		<section class="w-full lg:w-[1140px] h-screen mx-auto text-animation flex">
+		<section class="flex justify-center w-full lg:w-[1140px] h-screen mx-auto text-animation z-1">
 			<h1 class="text-center text-9xl mx-auto z-[-1] opacity-60 font-black about-text">ABOUT ME</h1>
 			<p class="text-5xl text-pretty reveal-text font-semibold mt-24">
-				Data analyst with <span class="text-green-600">+3 years of experience</span> in data analysis and interpretation. 
-				Strong foundation in <span class="text-green-600">mathematics and statistics</span>, with a passion for theoretical concepts and their practical applications. 
-				Adept at leveraging statistical techniques and data visualization tools to drive <span class="text-green-600">insights</span> and support <span class="text-green-600">decision-making</span> processes. 
+				Data analyst with <span class="text-green-600 font-bold">+3 years of experience</span> in data analysis and interpretation. 
+				Strong foundation in <span class="text-green-600 font-bold">mathematics and statistics</span>, with a passion for theoretical 
+				concepts and their practical applications. Adept at leveraging statistical techniques and data visualization tools to 
+				drive <span class="text-green-600 font-bold">insights</span> and support <span class="text-green-600 font-bold">decision-making</span> 
+				processes. 
 			</p>
 		</section>
-		<section>
-		<Timeline />
+		<section class="relative flex justify-center m-auto flex-col items-center timeline">
+			<h1 class="text-center text-9xl mx-auto z-[-1] opacity-60 font-black about-text">EXPERIENCE</h1>
+			<article class="mt-[-150px]">
+				<div class="relative flex flex-col items-center" style="flex-flow: column;">
+					<div class="absolute w-1 h-full bg-[#222] z-[-1]">
+						<div class="w-1 h-[50vh] fixed bottom-[50vh] bg-transparent line-timeline"></div>
+					</div>
+					<div 
+						class="grid grid-cols-3 gap-0 w-full ml-auto mr-auto pt-20 pb-20 opacity-10 timeline-text-k" 
+						style="grid-template-columns: 1fr 160px 1fr;"
+					>
+						<div>
+							<span class="font-medium text-5xl">
+								September, 2023
+							</span>
+						</div>
+						<div>
+							<div class="flex justify-center size-4 bg-white rounded-full m-auto ball-k" />
+						</div>
+						<div>
+							<p class="font-medium text-xl text-pretty exp-p">
+								Started working at <span class="text-green-600 font-bold">Komatsu Colombia S.A.S.</span> as the principal data analyst,
+								responsible for <span class="text-green-600 font-bold">centralizing data</span> from over 100 databases,
+								creating <span class="text-green-600 font-bold">automation workflows</span> in Azure Data Factory, and developing
+								projects such as an inventory demand <span class="text-green-600 font-bold">forecasting</span> application,
+								<span class="text-green-600 font-bold">Monte Carlo simulations</span> for machine working hours, work order 
+								<span class="text-green-600 font-bold">automation</span>, predictions for <span class="text-green-600 font-bold">service 
+								offerings</span>, and creating elegant <span class="text-green-600 font-bold">Power BI reports</span>.
+							</p>														
+						</div>
+					</div>
+					<div 
+						class="grid grid-cols-3 gap-0 w-full ml-auto mr-auto pt-20 pb-20 opacity-10 timeline-text-ur" 
+						style="grid-template-columns: 1fr 160px 1fr"
+					>
+						<div>
+							<span class="font-medium text-5xl">
+								August, 2021
+							</span>
+						</div>
+						<div>
+							<div class="flex justify-center size-4 bg-white rounded-full m-auto ball-ur" />
+						</div>
+						<div>
+							<p class="font-medium text-xl text-pretty exp-p">
+								Started working at <span class="text-green-600 font-bold">Urbefuturo</span> as a programmer data analyst, responsible for 
+								the <span class="text-green-600 font-bold">implementation of statistical methods</span> for data analysis and 
+								<span class="text-green-600 font-bold">restructuring</span> of the database. Creation of <span class="text-green-600 font-bold">reports 
+								and data visualization</span> using Power BI. Implementation of <span class="text-green-600 font-bold">geolocation</span> to 
+								keep control of the surveys and, consequently, implementation of predictive models to find the most 
+								<span class="text-green-600 font-bold">optimal locations</span> for conducting the surveys.
+							</p>														
+						</div>
+					</div>
+					<div 
+						class="grid grid-cols-3 gap-0 w-full ml-auto mr-auto pt-20 pb-20 opacity-10 timeline-text-phd" 
+						style="grid-template-columns: 1fr 160px 1fr"
+					>
+						<div>
+							<span class="font-medium text-5xl">
+								April, 2023 - May - 2023
+							</span>
+						</div>
+						<div>
+							<div class="flex justify-center size-4 bg-white rounded-full m-auto ball-phd" />
+						</div>
+						<div>
+							<p class="font-medium text-xl text-pretty exp-p">
+								Advisor for <span class="text-green-600 font-bold">PhD thesis in mathematics</span>. Translation of existing codes to create 
+								<span class="text-green-600 font-bold">optimizations and implement</span> new analysis methods. Created <span class="text-green-600 font-bold">simulation 
+								of SPH</span> to understand its behavior in different scenarios and in different quantities. <span class="text-green-600 font-bold">Improvement</span> 
+								of the obtained mathematical calculations and conversion to code.
+							</p>														
+						</div>
+					</div>
+				</div>
+			</article>
 		</section>
-		<section class="w-full lg:w-[1140px] h-screen mx-auto text-animation flex">
+		<section class="flex overflow-hidden space-x-16 mt-32">
+			<article class="flex items-center space-x-16 animate-loop-scroll skills">
+				<img loading="lazy" src="https://i.pinimg.com/originals/82/a2/18/82a2188c985ce75402ae44fc43fe7e5e.png" class="max-w-none" alt="Python">
+				<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1280px-R_logo.svg.png" class="max-w-none" alt="R">
+				<img loading="lazy" src="https://play-lh.googleusercontent.com/oiIVJOsRwPWMv5FfkneTnsuN-GdB53QUH49vfKBFP0iUnlSw3I4NnxDP0w7CMgqttXQ" class="max-w-none" alt="SPSS">
+				<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1024px-New_Power_BI_Logo.svg.png" class="max-w-none" alt="Power BI">
+				<img loading="lazy" src="https://swimburger.net/media/ppnn3pcl/azure.png" class="max-w-none" alt="Azure">
+				<img loading="lazy" src="https://tribes.agency/wp-content/uploads/2023/10/ext-550.png" class="max-w-none" alt="SQL Server">
+				<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png" class="max-w-none" alt="PostgreSQL">
+				<img loading="lazy" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" class="max-w-none" alt="Docker">
+				<img loading="lazy" src="https://astro.js.org/astro.png" class="max-w-none" alt="Astro">
+				<img loading="lazy" src="https://www.loopple.com/img/tailwind-logo.png" class="max-w-none" alt="Tailwind">
+			</article>
+			<article class="flex items-center space-x-16 animate-loop-scroll skills ">
+				<img loading="lazy" src="https://i.pinimg.com/originals/82/a2/18/82a2188c985ce75402ae44fc43fe7e5e.png" class="max-w-none" alt="Python">
+				<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1280px-R_logo.svg.png" class="max-w-none" alt="R">
+				<img loading="lazy" src="https://play-lh.googleusercontent.com/oiIVJOsRwPWMv5FfkneTnsuN-GdB53QUH49vfKBFP0iUnlSw3I4NnxDP0w7CMgqttXQ" class="max-w-none" alt="SPSS">
+				<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1024px-New_Power_BI_Logo.svg.png" class="max-w-none" alt="Power BI">
+				<img loading="lazy" src="https://swimburger.net/media/ppnn3pcl/azure.png" class="max-w-none" alt="Azure">
+				<img loading="lazy" src="https://tribes.agency/wp-content/uploads/2023/10/ext-550.png" class="max-w-none" alt="SQL Server">
+				<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png" class="max-w-none" alt="PostgreSQL">
+				<img loading="lazy" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" class="max-w-none" alt="Docker">
+				<img loading="lazy" src="https://astro.js.org/astro.png" class="max-w-none" alt="Astro">
+				<img loading="lazy" src="https://www.loopple.com/img/tailwind-logo.png" class="max-w-none" alt="Tailwind">
+			</article>
+		</section>		
+		<section class="w-full lg:w-[1140px] mx-auto mt-32 h-screen z-1">
 			<h1 class="text-center text-9xl mx-auto z-[-1] opacity-60 font-black about-text">PROJECTS</h1>
 		</section>
 	</main>
@@ -92,6 +193,14 @@ import Timeline from '../components/timeline.astro';
 			background-position: 470px;
 		}
 	}
+
+	.exp-p {
+		max-width: 40ch;
+	}
+
+	.skills > img {
+		height: 100px;
+	}
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -120,4 +229,96 @@ import Timeline from '../components/timeline.astro';
 			stagger: .1,
 		})
 	})
+
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.timeline',
+			start: '0% 50%',
+			end: '80% 50%',
+			scrub: 1,
+		}
+	})
+
+	const lineTimeline = document.querySelector('.line-timeline') as HTMLElement;
+
+	tl.to('.line-timeline', {
+		'background': 'rgb(22, 163, 74)',
+		onStart: function() {
+			if (lineTimeline !== null) {
+				lineTimeline.style.backgroundColor = 'transparent';
+			}
+		},
+		onComplete: function() {
+			if (lineTimeline !== null) {
+				lineTimeline.style.backgroundColor = 'transparent';
+			}
+		}
+	})
+
+	type TimelineParams = {
+		trigger: string,
+		start: string,
+		end: string,
+		target: string,
+		properties: Record<string, any>
+	};
+
+	function createTimeline({ trigger, start, end, target, properties }: TimelineParams) {
+		return gsap.timeline({
+			scrollTrigger: {
+				trigger: trigger,
+				start: start,
+				end: end,
+				scrub: 1,
+			}
+		}).to(target, properties);
+	}
+
+	let tl_t = createTimeline({
+		trigger: '.timeline',
+		start: '-20% 50%',
+		end: '80% 50%',
+		target: '.timeline-text-k',
+		properties: { opacity: 1 }
+	});
+
+	let tl_ur = createTimeline({
+		trigger: '.timeline',
+		start: '40% 50%',
+		end: '80% 50%',
+		target: '.timeline-text-ur',
+		properties: { opacity: 1 }
+	});
+
+	let tl_phd = createTimeline({
+		trigger: '.timeline',
+		start: '60% 50%',
+		end: '80% 50%',
+		target: '.timeline-text-phd',
+		properties: { opacity: 1 }
+	});
+
+	let tl_b_k = createTimeline({
+		trigger: '.timeline',
+		start: '20% 50%',
+		end: '80% 50%',
+		target: '.ball-k',
+		properties: { y: 100 }
+	});
+
+	let tl_b_ur = createTimeline({
+		trigger: '.timeline',
+		start: '60% 50%',
+		end: '80% 50%',
+		target: '.ball-ur',
+		properties: { y: 100 }
+	});
+
+	let tl_b_phd = createTimeline({
+		trigger: '.timeline',
+		start: '70% 50%',
+		end: '80% 50%',
+		target: '.ball-phd',
+		properties: { y: 100 }
+	});
 </script>
