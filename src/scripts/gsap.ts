@@ -79,9 +79,9 @@ const tl_phd = createTimeline({
 const tl_efinex = createTimeline({
     trigger: '.projects-section',
     start: 'top 50%',
-    end: '50% 50%',
+    end: '30% 50%',
     target: '.efinex',
-    properties: { 'margin-top': '0px', opacity: 1 }
+    properties: { 'margin-top': '-10px', opacity: 1 }
 })
 
 const tl_f1_dash = createTimeline({
