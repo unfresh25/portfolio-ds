@@ -1,7 +1,9 @@
 {
+    "buildCommand": "npm run build",
     "functions": {
-      ".vercel/output/functions/_render.func/**": {
+      ".vercel/output/functions/**": {
         "runtime": "nodejs20.x"
       }
-    }
+    },
+    "framework": null
   }
