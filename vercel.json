@@ -1,7 +1,7 @@
 {
     "functions": {
-        "src/pages/**/*.astro": {
-            "runtime": "nodejs20.x"
-        }
+      ".vercel/output/functions/_render.func/**": {
+        "runtime": "nodejs20.x"
+      }
     }
-}
+  }
