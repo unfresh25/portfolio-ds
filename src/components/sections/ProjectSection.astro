@@ -1,0 +1,45 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+    {
+        title: "GLSM Package",
+        description: "A comprehensive R package for computing maximum likelihood estimates (MLEs) of parameters under four models: null, complete, saturated, and logistic for multinomial outcomes. The package provides estimation capabilities for any number of explanatory variables and includes robust statistical methods for grouped data analysis. Published on CRAN and developed with advanced statistical modeling techniques.",
+        imageSrc: "/img/glsm.PNG",
+        githubUrl: "https://github.com/unfresh25/glsm",
+        websiteUrl: "https://cran.r-project.org/web/packages/glsm/index.html",
+        className: "glsm-package"
+    },
+    {
+        title: "EFINEX",
+        description: "This web application allows users to explore the current stock market by interacting with statistical graphs and viewing market data by hovering over them. It includes indicators such as On-Balance Volume (OBV), Moving Average Convergence/Divergence (MACD), Stochastic Oscillator (SO), and Accumulation/Distribution (A/D). The app offers an excellent user experience, developed with Dash and Plotly APIs, and was challenging to create due to the multiple callbacks and statistical calculations involved.",
+        videoSrc: "/videos/efinex-video.mp4",
+        githubUrl: "https://github.com/unfresh25/finance-dash-explorer",
+        websiteUrl: "https://finance-dash-explorer.onrender.com/",
+        className: "efinex"
+    },
+    {
+        title: "F1 Dashboard",
+        description: "The application is designed to provide a comprehensive overview of Formula 1 racing data, including race results, driver performance, and circuit information. The user can explore and analyze the data in various ways to gain insights into the drivers, races, and circuits of the world's most prestigious Formula 1 racing organization.",
+        videoSrc: "/videos/f1-video.mp4",
+        githubUrl: "https://github.com/unfresh25/finance-dash-explorer",
+        websiteUrl: "https://finance-dash-explorer.onrender.com/",
+        className: "f1-dash"
+    }
+];
+---
+
+<section class="w-full lg:w-[1140px] mx-auto mt-32 z-1 projects-section" id="projects">
+    <h1 class="text-center !text-5xl lg:!text-9xl mx-auto z-[-3] opacity-60 font-black section-title">PROJECTS</h1>
+    {projects.map((project) => (
+        <ProjectCard 
+            title={project.title}
+            description={project.description}
+            videoSrc={project.videoSrc}
+            imageSrc={project.imageSrc}
+            githubUrl={project.githubUrl}
+            websiteUrl={project.websiteUrl}
+            className={project.className}
+        />
+    ))}
+</section>

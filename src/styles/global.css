@@ -1,0 +1,68 @@
+.animationn {
+    background: linear-gradient(to right, #9d4edd 0, white 10%, #9d4edd 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+.section-title {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: white;
+    font-size: 180px;
+}
+
+.reveal-text {
+    position: absolute;
+    max-width: 35ch;
+}
+
+.reveal-text-hover {
+    opacity: 1;
+    position: absolute;
+    width: 0%;
+    max-width: 35ch;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    50% {
+        background-position: 470px;
+    }
+    100% {
+        background-position: 470px;
+    }
+}
+
+.exp-p {
+    max-width: 40ch;
+}
+
+.skills > img {
+    height: 50px;
+}
+
+@media (min-width: 1024px) {
+    .skills > img {
+        height: 100px;
+    }
+}
+
+.project-exp {
+    max-width: 60ch;
+}
+
+.video-container:hover .project-hover-text{
+    opacity: 1;
+}
+
+.project-hover-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

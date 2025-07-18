@@ -52,9 +52,18 @@ function createTimeline({ trigger, start, end, target, properties }: TimelinePar
     }).to(target, properties);
 }
 
-const tl_t = createTimeline({
+// Timeline animations for experience sections
+const tl_promigas = createTimeline({
     trigger: '.timeline',
     start: '-20% 50%',
+    end: 'bottom 50%',
+    target: '.timeline-text-promigas',
+    properties: { opacity: 1 }
+});
+
+const tl_k = createTimeline({
+    trigger: '.timeline',
+    start: '10% 50%',
     end: 'bottom 50%',
     target: '.timeline-text-k',
     properties: { opacity: 1 }
@@ -70,16 +79,25 @@ const tl_ur = createTimeline({
 
 const tl_phd = createTimeline({
     trigger: '.timeline',
-    start: '60% 50%',
+    start: '70% 50%',
     end: 'bottom 50%',
     target: '.timeline-text-phd',
     properties: { opacity: 1 }
 });
 
-const tl_efinex = createTimeline({
+// Projects animations
+const tl_glsm = createTimeline({
     trigger: '.projects-section',
     start: 'top 50%',
     end: '30% 50%',
+    target: '.glsm-package',
+    properties: { 'margin-top': '10px', opacity: 1 }
+})
+
+const tl_efinex = createTimeline({
+    trigger: '.projects-section',
+    start: 'top 50%',
+    end: '50% 50%',
     target: '.efinex',
     properties: { 'margin-top': '-10px', opacity: 1 }
 })
@@ -87,7 +105,7 @@ const tl_efinex = createTimeline({
 const tl_f1_dash = createTimeline({
     trigger: '.projects-section',
     start: 'top 50%',
-    end: '50% 50%',
+    end: '70% 50%',
     target: '.f1-dash',
     properties: { 'margin-top': '20px', opacity: 1 }
 })

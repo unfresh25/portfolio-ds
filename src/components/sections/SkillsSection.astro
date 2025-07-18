@@ -1,0 +1,32 @@
+---
+const skills = [
+    { name: "Python", src: "https://i.pinimg.com/originals/82/a2/18/82a2188c985ce75402ae44fc43fe7e5e.png" },
+    { name: "R", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1280px-R_logo.svg.png" },
+    { name: "Scikit-learn", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" },
+    { name: "TensorFlow", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" },
+    { name: "PyTorch", src: "https://pytorch.org/assets/images/pytorch-logo.png" },
+    { name: "Pandas", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" },
+    { name: "Azure", src: "https://swimburger.net/media/ppnn3pcl/azure.png" },
+    { name: "Dataiku", src: "https://cdn-public.softwarereviews.com/production/favicons/offerings/7805/original/Dataiku_icon.png" },
+    { name: "SQL Server", src: "https://tribes.agency/wp-content/uploads/2023/10/ext-550.png" },
+    { name: "PostgreSQL", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png" },
+    { name: "Power BI", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1024px-New_Power_BI_Logo.svg.png" },
+    { name: "Plotly", src: "https://images.plot.ly/logo/new-branding/plotly-logomark.png" },
+    { name: "Tableau", src: "https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" },
+    { name: "Docker", src: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" },
+    { name: "Git", src: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" }
+];
+---
+
+<section class="flex overflow-hidden space-x-16 mt-32">
+    <article class="flex items-center space-x-16 animate-loop-scroll skills">
+        {skills.map((skill) => (
+            <img loading="lazy" src={skill.src} class="max-w-none" alt={skill.name} />
+        ))}
+    </article>
+    <article class="flex items-center space-x-16 animate-loop-scroll skills">
+        {skills.map((skill) => (
+            <img loading="lazy" src={skill.src} class="max-w-none" alt={skill.name} />
+        ))}
+    </article>
+</section>

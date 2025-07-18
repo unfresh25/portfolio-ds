@@ -1,0 +1,71 @@
+---
+import TimelineItem from './TimelineItem.astro';
+
+const experiences = [
+    {
+        date: "Aug, 2024 - Jan, 2025",
+        company: "Promigas",
+        description: `Worked as a data management professional at <span class="text-[#9d4edd] font-bold">Promigas</span>,
+            responsible for developing <span class="text-[#9d4edd] font-bold">time series models</span> using Prophet to classify customers based on 
+            consumption history. Built <span class="text-[#9d4edd] font-bold">AI-based classification models</span> to predict deviations in product 
+            consumption and created applications in <span class="text-[#9d4edd] font-bold">Dataiku</span> for analysts to execute and download analyses.
+            Configured <span class="text-[#9d4edd] font-bold">development</span> and <span class="text-[#9d4edd] font-bold">production</span> environments and implemented 
+            predictive models using <span class="text-[#9d4edd] font-bold">LightGBM</span> for landslide forecasting in gas pipeline zones.`,
+        ballClass: "ball-promigas",
+        textClass: "timeline-text-promigas"
+    },
+    {
+        date: "Sep, 2023",
+        company: "Komatsu Colombia S.A.S.",
+        description: `Started working at <span class="text-[#9d4edd] font-bold">Komatsu Colombia S.A.S.</span> as the principal data analyst,
+            responsible for <span class="text-[#9d4edd] font-bold">centralizing data</span> from over 100 databases,
+            creating <span class="text-[#9d4edd] font-bold">automation workflows</span> in Azure Data Factory, and developing
+            projects such as an inventory demand <span class="text-[#9d4edd] font-bold">forecasting</span> application,
+            <span class="text-[#9d4edd] font-bold">Monte Carlo simulations</span> for machine working hours, work order 
+            <span class="text-[#9d4edd] font-bold">automation</span>, predictions for <span class="text-[#9d4edd] font-bold">service 
+            offerings</span>, and creating elegant <span class="text-[#9d4edd] font-bold">Power BI reports</span>.`,
+        ballClass: "ball-k",
+        textClass: "timeline-text-k"
+    },
+    {
+        date: "Aug, 2021",
+        company: "Urbefuturo",
+        description: `Started working at <span class="text-[#9d4edd] font-bold">Urbefuturo</span> as a programmer data analyst, responsible for 
+            the <span class="text-[#9d4edd] font-bold">implementation of statistical methods</span> for data analysis and 
+            <span class="text-[#9d4edd] font-bold">restructuring</span> of the database. Creation of <span class="text-[#9d4edd] font-bold">reports 
+            and data visualization</span> using Power BI. Implementation of <span class="text-[#9d4edd] font-bold">geolocation</span> to 
+            keep control of the surveys and, consequently, implementation of predictive models to find the most 
+            <span class="text-[#9d4edd] font-bold">optimal locations</span> for conducting the surveys.`,
+        ballClass: "ball-ur",
+        textClass: "timeline-text-ur"
+    },
+    {
+        date: "Apr, 2023 - May, 2023",
+        company: "PhD Advisor",
+        description: `Advisor for <span class="text-[#9d4edd] font-bold">PhD thesis in mathematics</span>. Translation of existing codes to create 
+            <span class="text-[#9d4edd] font-bold">optimizations and implement</span> new analysis methods. Created <span class="text-[#9d4edd] font-bold">simulation 
+            of SPH</span> to understand its behavior in different scenarios and in different quantities. <span class="text-[#9d4edd] font-bold">Improvement</span> 
+            of the obtained mathematical calculations and conversion to code.`,
+        ballClass: "ball-phd",
+        textClass: "timeline-text-phd"
+    }
+];
+---
+
+<section class="relative flex justify-center flex-col items-center timeline m-4 lg:m-auto" id="experience">
+    <h1 class="text-center !text-5xl lg:!text-9xl mx-auto z-[-1] opacity-60 font-black section-title">EXPERIENCE</h1>
+    <article class="lg:mt-0">
+        <div class="relative flex flex-col items-center" style="flex-flow: column;">
+            <div class="absolute w-1 h-0 bg-[#9d4edd] z-[-1] line-timeline" />
+            {experiences.map((exp) => (
+                <TimelineItem 
+                    date={exp.date}
+                    company={exp.company}
+                    description={exp.description}
+                    ballClass={exp.ballClass}
+                    textClass={exp.textClass}
+                />
+            ))}
+        </div>
+    </article>
+</section>

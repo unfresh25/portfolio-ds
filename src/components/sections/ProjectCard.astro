@@ -1,0 +1,50 @@
+---
+import Pills from '../social-pills.astro';
+import Github from '../icons/github.astro';
+import Website from '../icons/web.astro';
+
+export interface Props {
+    title: string;
+    description: string;
+    videoSrc?: string;
+    imageSrc?: string;
+    githubUrl: string;
+    websiteUrl: string;
+    className?: string;
+}
+
+const { title, description, videoSrc, imageSrc, githubUrl, websiteUrl, className = '' } = Astro.props;
+---
+
+<article class={`flex flex-col w-full h-screen bg-[#222] mt-80 opacity-0 rounded-md overflow-hidden ${className}`}>
+    <div class="relative w-full h-full video-container">
+        {videoSrc ? (
+            <!-- Video visible como preview, se reproduce en hover -->
+            <video src={videoSrc} class="absolute top-0 left-0 w-full h-full object-cover hover-video" muted></video>
+        ) : (
+            <!-- Imagen estática para proyectos sin video -->
+            <img src={imageSrc} alt={title} class="absolute top-0 left-0 w-full h-full object-cover" />
+        )}
+        
+        <!-- Gradiente más oscuro para mejor contraste -->
+        <div class="absolute z-2 bottom-0 top-0 w-full h-full bg-gradient-to-b from-black/30 via-black/60 to-black/90"></div>
+        
+        <!-- Información del proyecto siempre visible con mejor contraste -->
+        <div class="absolute top-[40%] z-10 px-3 lg:p-16 project-info">
+            <h2 class="!text-3xl lg:!text-6xl font-bold text-[#9d4edd] animationn drop-shadow-2xl">{title}</h2>
+            <p class="mt-5 text-pretty text-base lg:!text-xl project-exp text-white drop-shadow-lg">
+                {description}
+            </p>
+            <nav class="flex gap-x-3 mt-3">
+                <Pills href={githubUrl}>
+                    <Github class="size-5" />
+                    View code
+                </Pills>
+                <Pills href={websiteUrl}>
+                    <Website class="size-5" />
+                    View website
+                </Pills>
+            </nav>
+        </div>
+    </div>
+</article>

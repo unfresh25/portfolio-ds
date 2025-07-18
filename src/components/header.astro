@@ -1,7 +1,23 @@
-<header class="flex justify-center items-center py-3 w-full lg:w-[1120px] mt-5 mx-auto">
-    <nav class="flex flex-row gap-x-10">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center items-center py-3 w-full backdrop-blur-md border-b border-white/10">
+    <nav class="flex flex-row gap-x-10 w-full lg:w-[1120px] justify-center">
+        <a href="#about" class="text-white hover:text-[#9d4edd] transition-colors duration-300 font-medium">About</a>
+        <a href="#experience" class="text-white hover:text-[#9d4edd] transition-colors duration-300 font-medium">Experience</a>
+        <a href="#projects" class="text-white hover:text-[#9d4edd] transition-colors duration-300 font-medium">Projects</a>
     </nav>
 </header>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+@supports not (backdrop-filter: blur(12px)) {
+    header {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+</style>
